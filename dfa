@@ -1,0 +1,40 @@
+MyDFA
+Author: Ella Myslo
+
+NORMAL (accept) <-- the start state
+/: MAYBE_COMMENT
+": STRING_LIT print the character (")
+': CHAR_LIT print the character (')
+other: NORMAL print the character
+
+MAYBE_COMMENT (accept)
+*: IN_COMMENT print whitespace
+": STRING_LIT print the character (/")
+': CHAR_LIT print the character (/')
+/: MAYBE_COMMENT print the character (/)
+other: NORMAL print the character (/ and whatever character)
+
+IN_COMMENT (reject)    	   	     
+*: MAYBE_END_COMMENT 
+other: IN_COMMENT
+
+MAYBE_END_COMMENT (reject)
+/: NORMAL
+*: MAYBE_END_COMMENT
+other: IN_COMMENT
+
+STRING_LIT (accept)
+\: STRING_ESCAPE print character (\)
+": NORMAL print character (")
+other: STRING_LIT print the character
+
+STRING_ESCAPE (accept)
+other: STRING_LIT print the character
+
+CHAR_LIT (accept)
+\: CHAR_ESCAPE print the character (\)
+': NORMAL print the character (') 
+other: CHAR_LIT print the character
+
+CHAR_ESCAPE (accept)
+other: CHAR_LIT print the character
