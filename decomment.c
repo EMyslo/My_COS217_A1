@@ -89,6 +89,9 @@ handleMaybeEndCommentState(int c)
       state = MAYBE_END_COMMENT;
    }
    else {
+      if (c == '\n') {
+         putchar(c);
+      }
       state = IN_COMMENT;
    }
    return state;
