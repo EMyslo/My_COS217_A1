@@ -197,10 +197,12 @@ int main(void)
       if (c == '\n') {
          absline++;
       }
-      else if ( state == MAYBE_COMMENT && c == '/') {
+      
+   }
+
+   if ( state == MAYBE_COMMENT && c == '/') {
          putchar('/');
       }
-   }
    
    if (state == IN_COMMENT || state == MAYBE_END_COMMENT) {
       /* Is the following fprintf correct way of incorporting the variable errline?*/
