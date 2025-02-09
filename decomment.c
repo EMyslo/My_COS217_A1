@@ -197,6 +197,9 @@ int main(void)
       if (c == '\n') {
          absline++;
       }
+      else if ( state == MAYBE_COMMENT && c == '/') {
+         putchar('/');
+      }
    }
    
    if (state == IN_COMMENT || state == MAYBE_END_COMMENT) {
