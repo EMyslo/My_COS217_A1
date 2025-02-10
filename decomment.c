@@ -200,7 +200,7 @@ int main(void)
       
    }
 
-   if ( state == MAYBE_COMMENT && c == '/') {
+   if (state == MAYBE_COMMENT) {
          putchar('/');
       }
    

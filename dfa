@@ -23,7 +23,7 @@ MAYBE_END_COMMENT (reject)
 *: MAYBE_END_COMMENT
 other: IN_COMMENT
 
-STRING_LIT (accept)
+STRING_LIT (accept) 
 \: STRING_ESCAPE print character (\)
 ": NORMAL print character (")
 other: STRING_LIT print the character
