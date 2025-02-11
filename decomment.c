@@ -60,7 +60,7 @@ handleMaybeCommentState(int c)
    return state;
 }
    
-/* Implement the IN_COMMENT state of the DFA. c is the current DFA character. Does not write to stdout while in a comment. Return the next state specified by the DFA*/
+/* Implement the IN_COMMENT state of the DFA. c is the current DFA character. Depending on the value of c, writes or does not write to stdout. Return the next state specified by the DFA*/
 enum Statetype
 handleInCommentState(int c)
 {
@@ -77,7 +77,7 @@ handleInCommentState(int c)
    return state;
 }
 
-/* Implement the MAYBE_END_COMMENT state of the DFA. c is the current DFA character. Does not write to stdout while in a comment. Return the next state specified by the DFA */
+/* Implement the MAYBE_END_COMMENT state of the DFA. c is the current DFA character. Depending on the value of c, writes or does not write to stdout. Return the next state specified by the DFA */
 enum Statetype
 handleMaybeEndCommentState(int c)
 {
@@ -157,7 +157,7 @@ handleCharEscapeState(int c)
    return state;
 }
 
-/*Read text from stdin one charater at a time. c is the current character in the DFA. Maintains absline, the current line of code, including comments. Maintains errline, the line on which the most recently opened comment began. Writes each character that is not part of a comment to stdout. Replaces each comment with a single whitespace and writes to stdout. Return EXIT_SUCCESS if program detects no unterminated comments. Return EXIT_FAILURE if detects an unterminated comment, and specify errline as the line where unterminated comment began.*/
+/*Read text from stdin one charater at a time. Writes each character that is not part of a comment to stdout. Replaces each comment with a single whitespace and writes to stdout. Return EXIT_SUCCESS if program detects no unterminated comments. Return EXIT_FAILURE if detects an unterminated comment, and specify the line where unterminated comment began.*/
 int main(void)
 {
    int c;
