@@ -3,6 +3,7 @@ Assignment 1 readme File
 ------------------------------------------------------------------------
 What is your name?
 
+Gabriella Myslo
 
 
 ------------------------------------------------------------------------
@@ -12,7 +13,18 @@ in the "Policies" web page (also available on armlab in the file
 ~cos217/AuthorizedSourcesList ) to this section of the readme file,
 and edit it as appropriate.
 
+The course's lectures, The course's precepts, The course's website,
+Documents that are referenced directly by the course's website. The
+course's current staff members outside of class time through office hours.
+The course's current staff members outside of class time through Ed.
+Current Intro Lab TAs through visits to the Intro COS Lab.
 
+Names of course staff and lab TAs I consulted for A1:
+Indu (Preceptor)
+Tolulope (Preceptor)
+Caitlyn (Lab TA)
+Jennifer (Lab TA)
+Athan (Lab TA)
 
 ------------------------------------------------------------------------
 What unauthorized sources of information did you use to complete the
@@ -26,7 +38,7 @@ interaction, may additionally require the interaction being reported
 to the Committee on Discipline. Write "None" if you used no
 unauthorized sources of information.
 
-
+None
 
 ------------------------------------------------------------------------
 In fulfillment of the requirement from section 2.4.3 of the Academic
@@ -36,18 +48,38 @@ enter your name in the space below the following affirmation:
 This paper represents my own work in accordance with University
 regulations.
 
-
+Gabriella Myslo
 
 ------------------------------------------------------------------------
 What is your assessment of the assignment? Was it helpful? Was it fun?
 
-
+The assignment was helpful and fun. I learned how to make a git commit/
+push the most recent version of my code to github. I also enjoyed
+revisiting the DFA, having taken ECE 206 (where DFA was known as FSM).
+It was also cool writing a program that performs a task of the 
+preprocessor; I feel like I'm developing an understanding of the inner
+mechanisms of computer systems.
 
 ------------------------------------------------------------------------
 (optional) What information can you provide about your submission that
 will help your grader to grade it in the most favorable light? In
 particular, what bugs are in your submission?
 
-
+I do not think there are any bugs in my submission. I tested a 
+non-final-version once and it failed after passing in the file
+04falsecommentstart7.txt. Then, I made changes and it passed the test
+on the same file. The next day, when I ran this same version again on
+the same file, it failed. I since made revisions, and the final 
+version passed the test on this file. I tested my final code on this
+file repeatedly and tested on all the files, including decomment.c
+itself, and everything worked. I don't have an expalanation
+for how that previous version passed the test but then failed the next
+day for the same code, same test file. I'm thinking maybe I did not 
+pass in the test file I thought I did. To account for a possible weird
+thing happening to the code, I will clarify the change I made to obtain
+the final version of my code that passed all tests: Placing an if()
+conditional in the main() method, outside of the while loop:
+if (state == MAYBE_COMMENT) {putchar('/');}. This passed when testing
+on 04falsecommentstart7.txt.
 
 ------------------------------------------------------------------------
