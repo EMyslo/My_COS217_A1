@@ -157,7 +157,7 @@ handleCharEscapeState(int c)
    return state;
 }
 
-/*Read text from stdin one charater at a time. c is the current character in the DFA. Maintains absline, a count of the current line of code including comments. Maintains errline, the line on which the most recently opened comment began. Writes each character that is not part of a comment to stdout. Replaces each comment with a single whitespace and writes to stdout. Return EXIT_SUCCESS if program detects no unterminated comments. Return EXIT_FAILURE if detects an unterminated comment.*/
+/*Read text from stdin one charater at a time. c is the current character in the DFA. Maintains absline, the current line of code, including comments. Maintains errline, the line on which the most recently opened comment began. Writes each character that is not part of a comment to stdout. Replaces each comment with a single whitespace and writes to stdout. Return EXIT_SUCCESS if program detects no unterminated comments. Return EXIT_FAILURE if detects an unterminated comment, and specify errline as the line where unterminated comment began.*/
 int main(void)
 {
    int c;
